@@ -1,0 +1,881 @@
+フォルダー パスの一覧:  ボリューム HD-NRLD-A
+ボリューム シリアル番号は 5C45-8091 です
+I:.
+|   .gitattributes
+|   .gitignore
+|   BUILD.md
+|   CMakeLists.txt
+|   CMakePresets.json
+|   CONTRIBUTING.md
+|   flake.lock
+|   flake.nix
+|   LICENSE
+|   README.md
+|   tree.txt
+|   vcpkg.json
+|   
++---.github
+|   |   FUNDING.yml
+|   |   
+|   \---workflows
+|           build-bsd.yml
+|           build-macos.yml
+|           build-ubuntu.yml
+|           build-windows.yml
+|           
++---cmake
+|   |   ConfigureVcpkg.cmake
+|   |   DefaultBuildFlags.cmake
+|   |   ECMFindModuleHelpers.cmake
+|   |   ECMFindModuleHelpersStub.cmake
+|   |   FindEGL.cmake
+|   |   FindENet.cmake
+|   |   FindVTune.cmake
+|   |   FixInterfaceIncludes.cmake
+|   |   Sanitizers.cmake
+|   |   SetupCCache.cmake
+|   |   Toolchain-cross-MinGW-w64-x86_64.cmake
+|   |   Toolchain-Homebrew-LLVM.cmake
+|   |   
+|   +---overlay-ports
+|   |   \---faad2
+|   |           fix-install.patch
+|   |           portfile.cmake
+|   |           vcpkg.json
+|   |           
+|   \---overlay-triplets
+|           arm64-osx-11-release.cmake
+|           x64-mingw-static-release.cmake
+|           x64-osx-1015-release.cmake
+|           
++---freebios
+|       bios_common.S
+|       drastic_bios_arm7.bin
+|       drastic_bios_arm9.bin
+|       drastic_bios_readme.txt
+|       Makefile
+|       
++---melonDLDI
+|       Makefile
+|       melonDLDI.s
+|       
++---res
+|   |   melon.icns
+|   |   melon.ico
+|   |   melon.plist.in
+|   |   melon.qrc
+|   |   melon.rc.in
+|   |   melon.svg
+|   |   melon384.png
+|   |   melon512.png
+|   |   net.kuribo64.melonDS.desktop
+|   |   xp.manifest.in
+|   |   
+|   \---icon
+|           melon_128x128.png
+|           melon_16x16.png
+|           melon_192x192.png
+|           melon_256x256.png
+|           melon_32x32.png
+|           melon_48x48.png
+|           melon_64x64.png
+|           
++---src
+|   |   ARCodeFile.cpp
+|   |   ARCodeFile.h
+|   |   ARDatabaseDAT.cpp
+|   |   ARDatabaseDAT.h
+|   |   AREngine.cpp
+|   |   AREngine.h
+|   |   Args.h
+|   |   ARM.cpp
+|   |   ARM.h
+|   |   ARMInterpreter.cpp
+|   |   ARMInterpreter.h
+|   |   ARMInterpreter_ALU.cpp
+|   |   ARMInterpreter_ALU.h
+|   |   ARMInterpreter_Branch.cpp
+|   |   ARMInterpreter_Branch.h
+|   |   ARMInterpreter_LoadStore.cpp
+|   |   ARMInterpreter_LoadStore.h
+|   |   ARMJIT.cpp
+|   |   ARMJIT.h
+|   |   ARMJIT_Compiler.h
+|   |   ARMJIT_Global.cpp
+|   |   ARMJIT_Global.h
+|   |   ARMJIT_Internal.h
+|   |   ARMJIT_Memory.cpp
+|   |   ARMJIT_Memory.h
+|   |   ARMJIT_RegisterCache.h
+|   |   ARM_InstrInfo.cpp
+|   |   ARM_InstrInfo.h
+|   |   ARM_InstrTable.h
+|   |   CMakeLists.txt
+|   |   CP15.cpp
+|   |   CRC32.cpp
+|   |   CRC32.h
+|   |   DMA.cpp
+|   |   DMA.h
+|   |   DMA_Timings.cpp
+|   |   DMA_Timings.h
+|   |   DSi.cpp
+|   |   DSi.h
+|   |   DSi_AES.cpp
+|   |   DSi_AES.h
+|   |   DSi_Camera.cpp
+|   |   DSi_Camera.h
+|   |   DSi_DSP.cpp
+|   |   DSi_DSP.h
+|   |   DSi_I2C.cpp
+|   |   DSi_I2C.h
+|   |   DSi_I2S.cpp
+|   |   DSi_I2S.h
+|   |   DSi_NAND.cpp
+|   |   DSi_NAND.h
+|   |   DSi_NDMA.cpp
+|   |   DSi_NDMA.h
+|   |   DSi_NWifi.cpp
+|   |   DSi_NWifi.h
+|   |   DSi_SD.cpp
+|   |   DSi_SD.h
+|   |   DSi_SPI_TSC.cpp
+|   |   DSi_SPI_TSC.h
+|   |   DSi_TMD.h
+|   |   FATIO.cpp
+|   |   FATIO.h
+|   |   FATStorage.cpp
+|   |   FATStorage.h
+|   |   FIFO.h
+|   |   FreeBIOS.cpp
+|   |   FreeBIOS.h
+|   |   GBACart.cpp
+|   |   GBACart.h
+|   |   GBACartMotionPak.cpp
+|   |   GPU.cpp
+|   |   GPU.h
+|   |   GPU2D.cpp
+|   |   GPU2D.h
+|   |   GPU2D_Soft.cpp
+|   |   GPU2D_Soft.h
+|   |   GPU3D.cpp
+|   |   GPU3D.h
+|   |   GPU3D_Compute.cpp
+|   |   GPU3D_Compute.h
+|   |   GPU3D_Compute_shaders.h
+|   |   GPU3D_OpenGL.cpp
+|   |   GPU3D_OpenGL.h
+|   |   GPU3D_OpenGL_shaders.h
+|   |   GPU3D_Soft.cpp
+|   |   GPU3D_Soft.h
+|   |   GPU3D_Texcache.cpp
+|   |   GPU3D_Texcache.h
+|   |   GPU3D_TexcacheOpenGL.cpp
+|   |   GPU3D_TexcacheOpenGL.h
+|   |   GPU_OpenGL.cpp
+|   |   GPU_OpenGL.h
+|   |   GPU_OpenGL_shaders.h
+|   |   JitBlock.h
+|   |   melonDLDI.h
+|   |   MemConstants.h
+|   |   MemRegion.h
+|   |   Mic.cpp
+|   |   Mic.h
+|   |   NDS.cpp
+|   |   NDS.h
+|   |   NDSCart.cpp
+|   |   NDSCart.h
+|   |   NDSCartR4.cpp
+|   |   NDS_Header.h
+|   |   NonStupidBitfield.h
+|   |   OpenGLSupport.cpp
+|   |   OpenGLSupport.h
+|   |   Platform.h
+|   |   PlatformOGL.h
+|   |   ROMList.cpp
+|   |   ROMList.h
+|   |   RTC.cpp
+|   |   RTC.h
+|   |   Savestate.cpp
+|   |   Savestate.h
+|   |   SPI.cpp
+|   |   SPI.h
+|   |   SPI_Firmware.cpp
+|   |   SPI_Firmware.h
+|   |   SPU.cpp
+|   |   SPU.h
+|   |   TinyVector.h
+|   |   types.h
+|   |   Utils.cpp
+|   |   Utils.h
+|   |   version.h.in
+|   |   Wifi.cpp
+|   |   Wifi.h
+|   |   WifiAP.cpp
+|   |   WifiAP.h
+|   |   
+|   +---ARMJIT_A64
+|   |       ARMJIT_ALU.cpp
+|   |       ARMJIT_Branch.cpp
+|   |       ARMJIT_Compiler.cpp
+|   |       ARMJIT_Compiler.h
+|   |       ARMJIT_Linkage.S
+|   |       ARMJIT_LoadStore.cpp
+|   |       
+|   +---ARMJIT_x64
+|   |       ARMJIT_ALU.cpp
+|   |       ARMJIT_Branch.cpp
+|   |       ARMJIT_Compiler.cpp
+|   |       ARMJIT_Compiler.h
+|   |       ARMJIT_GenOffsets.cpp
+|   |       ARMJIT_Linkage.S
+|   |       ARMJIT_LoadStore.cpp
+|   |       ARMJIT_Offsets.h
+|   |       
+|   +---blip-buf
+|   |       blip_buf.c
+|   |       blip_buf.h
+|   |       license.txt
+|   |       readme.txt
+|   |       
+|   +---debug
+|   |   |   GdbArch.h
+|   |   |   GdbCmds.cpp
+|   |   |   GdbCmds.h
+|   |   |   GdbProto.cpp
+|   |   |   GdbStub.cpp
+|   |   |   GdbStub.h
+|   |   |   hexutil.h
+|   |   |   
+|   |   \---gdb_test
+|   |           .gitignore
+|   |           main.cpp
+|   |           Makefile
+|   |           
+|   +---dolphin
+|   |       Align.h
+|   |       Arm64Emitter.cpp
+|   |       Arm64Emitter.h
+|   |       ArmCommon.h
+|   |       BitSet.h
+|   |       BitUtils.h
+|   |       CommonFuncs.cpp
+|   |       CommonFuncs.h
+|   |       Compat.h
+|   |       CPUDetect.h
+|   |       license_dolphin.txt
+|   |       MathUtil.cpp
+|   |       MathUtil.h
+|   |       x64ABI.cpp
+|   |       x64ABI.h
+|   |       x64CPUDetect.cpp
+|   |       x64Emitter.cpp
+|   |       x64Emitter.h
+|   |       x64Reg.h
+|   |       
+|   +---DSP_HLE
+|   |       AACUcode.cpp
+|   |       AACUcode.h
+|   |       G711Ucode.cpp
+|   |       G711Ucode.h
+|   |       GraphicsUcode.cpp
+|   |       GraphicsUcode.h
+|   |       UcodeBase.cpp
+|   |       UcodeBase.h
+|   |       
+|   +---fatfs
+|   |       00history.txt
+|   |       00readme.txt
+|   |       diskio.h
+|   |       ff.c
+|   |       ff.h
+|   |       ffconf.h
+|   |       ffsystem.c
+|   |       ffunicode.c
+|   |       LICENSE.txt
+|   |       
+|   +---frontend
+|   |   |   mic_blow.h
+|   |   |   ScreenLayout.cpp
+|   |   |   ScreenLayout.h
+|   |   |   
+|   |   +---duckstation
+|   |   |   |   duckstation_compat.h
+|   |   |   |   log.h
+|   |   |   |   scoped_guard.h
+|   |   |   |   windows_headers.h
+|   |   |   |   window_info.cpp
+|   |   |   |   window_info.h
+|   |   |   |   
+|   |   |   \---gl
+|   |   |           context.cpp
+|   |   |           context.h
+|   |   |           context_agl.h
+|   |   |           context_agl.mm
+|   |   |           context_egl.cpp
+|   |   |           context_egl.h
+|   |   |           context_egl_wayland.cpp
+|   |   |           context_egl_wayland.h
+|   |   |           context_egl_x11.cpp
+|   |   |           context_egl_x11.h
+|   |   |           context_glx.cpp
+|   |   |           context_glx.h
+|   |   |           context_wgl.cpp
+|   |   |           context_wgl.h
+|   |   |           loader.h
+|   |   |           x11_window.cpp
+|   |   |           x11_window.h
+|   |   |           
+|   |   +---glad
+|   |   |       eglplatform.h
+|   |   |       glad.c
+|   |   |       glad.h
+|   |   |       glad_egl.c
+|   |   |       glad_egl.h
+|   |   |       glad_glx.c
+|   |   |       glad_glx.h
+|   |   |       glad_wgl.c
+|   |   |       glad_wgl.h
+|   |   |       khrplatform.h
+|   |   |       
+|   |   \---qt_sdl
+|   |       |   AboutDialog.cpp
+|   |       |   AboutDialog.h
+|   |       |   AboutDialog.ui
+|   |       |   ArchiveUtil.cpp
+|   |       |   ArchiveUtil.h
+|   |       |   AudioSettingsDialog.cpp
+|   |       |   AudioSettingsDialog.h
+|   |       |   AudioSettingsDialog.ui
+|   |       |   CameraManager.cpp
+|   |       |   CameraManager.h
+|   |       |   CameraSettingsDialog.cpp
+|   |       |   CameraSettingsDialog.h
+|   |       |   CameraSettingsDialog.ui
+|   |       |   CheatImportDialog.cpp
+|   |       |   CheatImportDialog.h
+|   |       |   CheatImportDialog.ui
+|   |       |   CheatsDialog.cpp
+|   |       |   CheatsDialog.h
+|   |       |   CheatsDialog.ui
+|   |       |   CLI.cpp
+|   |       |   CLI.h
+|   |       |   CMakeLists.txt
+|   |       |   Config.cpp
+|   |       |   Config.h
+|   |       |   DateTimeDialog.cpp
+|   |       |   DateTimeDialog.h
+|   |       |   DateTimeDialog.ui
+|   |       |   EmuInstance.cpp
+|   |       |   EmuInstance.h
+|   |       |   EmuInstanceAudio.cpp
+|   |       |   EmuInstanceInput.cpp
+|   |       |   EmuSettingsDialog.cpp
+|   |       |   EmuSettingsDialog.h
+|   |       |   EmuSettingsDialog.ui
+|   |       |   EmuThread.cpp
+|   |       |   EmuThread.h
+|   |       |   FirmwareSettingsDialog.cpp
+|   |       |   FirmwareSettingsDialog.h
+|   |       |   FirmwareSettingsDialog.ui
+|   |       |   font.h
+|   |       |   InterfaceSettingsDialog.cpp
+|   |       |   InterfaceSettingsDialog.h
+|   |       |   InterfaceSettingsDialog.ui
+|   |       |   LANDialog.cpp
+|   |       |   LANDialog.h
+|   |       |   LANDialog.ui
+|   |       |   LANStartClientDialog.ui
+|   |       |   LANStartHostDialog.ui
+|   |       |   main.cpp
+|   |       |   main.h
+|   |       |   main_shaders.h
+|   |       |   MPSettingsDialog.cpp
+|   |       |   MPSettingsDialog.h
+|   |       |   MPSettingsDialog.ui
+|   |       |   NetplayDialog.cpp
+|   |       |   NetplayDialog.h
+|   |       |   NetplayDialog.ui
+|   |       |   NetplayStartClientDialog.ui
+|   |       |   NetplayStartHostDialog.ui
+|   |       |   OSD_shaders.h
+|   |       |   PathSettingsDialog.cpp
+|   |       |   PathSettingsDialog.h
+|   |       |   PathSettingsDialog.ui
+|   |       |   Platform.cpp
+|   |       |   Platform_AAC.cpp
+|   |       |   QPathInput.h
+|   |       |   RAMInfoDialog.cpp
+|   |       |   RAMInfoDialog.h
+|   |       |   RAMInfoDialog.ui
+|   |       |   ROMInfoDialog.cpp
+|   |       |   ROMInfoDialog.h
+|   |       |   ROMInfoDialog.ui
+|   |       |   SaveManager.cpp
+|   |       |   SaveManager.h
+|   |       |   Screen.cpp
+|   |       |   Screen.h
+|   |       |   TitleImportDialog.ui
+|   |       |   TitleManagerDialog.cpp
+|   |       |   TitleManagerDialog.h
+|   |       |   TitleManagerDialog.ui
+|   |       |   VideoSettingsDialog.cpp
+|   |       |   VideoSettingsDialog.h
+|   |       |   VideoSettingsDialog.ui
+|   |       |   WifiSettingsDialog.cpp
+|   |       |   WifiSettingsDialog.h
+|   |       |   WifiSettingsDialog.ui
+|   |       |   Window.cpp
+|   |       |   Window.h
+|   |       |   
+|   |       +---gif-h
+|   |       |       gif.h
+|   |       |       
+|   |       +---InputConfig
+|   |       |   |   InputConfigDialog.cpp
+|   |       |   |   InputConfigDialog.h
+|   |       |   |   InputConfigDialog.ui
+|   |       |   |   MapButton.h
+|   |       |   |   
+|   |       |   \---resources
+|   |       |           ds.qrc
+|   |       |           ds_back.svg
+|   |       |           ds_open.svg
+|   |       |           LICENSE.md
+|   |       |           
+|   |       +---PowerManagement
+|   |       |   |   PowerManagementDialog.cpp
+|   |       |   |   PowerManagementDialog.h
+|   |       |   |   PowerManagementDialog.ui
+|   |       |   |   
+|   |       |   \---resources
+|   |       |           battery.qrc
+|   |       |           dsi_battery2.svg
+|   |       |           dsi_battery3.svg
+|   |       |           dsi_batteryalmostempty.svg
+|   |       |           dsi_batteryfull.svg
+|   |       |           dsi_batterylow.svg
+|   |       |           
+|   |       \---toml
+|   |           |   toml.hpp
+|   |           |   toml_fwd.hpp
+|   |           |   
+|   |           \---toml11
+|   |               |   color.hpp
+|   |               |   comments.hpp
+|   |               |   compat.hpp
+|   |               |   context.hpp
+|   |               |   conversion.hpp
+|   |               |   datetime.hpp
+|   |               |   error_info.hpp
+|   |               |   exception.hpp
+|   |               |   find.hpp
+|   |               |   format.hpp
+|   |               |   from.hpp
+|   |               |   get.hpp
+|   |               |   into.hpp
+|   |               |   literal.hpp
+|   |               |   location.hpp
+|   |               |   ordered_map.hpp
+|   |               |   parser.hpp
+|   |               |   region.hpp
+|   |               |   result.hpp
+|   |               |   scanner.hpp
+|   |               |   serializer.hpp
+|   |               |   skip.hpp
+|   |               |   source_location.hpp
+|   |               |   spec.hpp
+|   |               |   storage.hpp
+|   |               |   syntax.hpp
+|   |               |   traits.hpp
+|   |               |   types.hpp
+|   |               |   utility.hpp
+|   |               |   value.hpp
+|   |               |   value_t.hpp
+|   |               |   version.hpp
+|   |               |   visit.hpp
+|   |               |   
+|   |               +---fwd
+|   |               |       color_fwd.hpp
+|   |               |       comments_fwd.hpp
+|   |               |       datetime_fwd.hpp
+|   |               |       error_info_fwd.hpp
+|   |               |       format_fwd.hpp
+|   |               |       literal_fwd.hpp
+|   |               |       location_fwd.hpp
+|   |               |       region_fwd.hpp
+|   |               |       scanner_fwd.hpp
+|   |               |       source_location_fwd.hpp
+|   |               |       syntax_fwd.hpp
+|   |               |       value_t_fwd.hpp
+|   |               |       
+|   |               \---impl
+|   |                       color_impl.hpp
+|   |                       comments_impl.hpp
+|   |                       datetime_impl.hpp
+|   |                       error_info_impl.hpp
+|   |                       format_impl.hpp
+|   |                       literal_impl.hpp
+|   |                       location_impl.hpp
+|   |                       region_impl.hpp
+|   |                       scanner_impl.hpp
+|   |                       source_location_impl.hpp
+|   |                       syntax_impl.hpp
+|   |                       value_t_impl.hpp
+|   |                       
+|   +---net
+|   |   |   CMakeLists.txt
+|   |   |   LAN.cpp
+|   |   |   LAN.h
+|   |   |   LocalMP.cpp
+|   |   |   LocalMP.h
+|   |   |   MPInterface.cpp
+|   |   |   MPInterface.h
+|   |   |   Net.cpp
+|   |   |   Net.h
+|   |   |   NetDriver.h
+|   |   |   Netplay.cpp
+|   |   |   Netplay.h
+|   |   |   Net_PCap.cpp
+|   |   |   Net_PCap.h
+|   |   |   Net_Slirp.cpp
+|   |   |   Net_Slirp.h
+|   |   |   PacketDispatcher.cpp
+|   |   |   PacketDispatcher.h
+|   |   |   
+|   |   +---libslirp
+|   |   |   |   .clang-format
+|   |   |   |   .gitignore
+|   |   |   |   .gitlab-ci.yml
+|   |   |   |   .gitpublish
+|   |   |   |   CHANGELOG.md
+|   |   |   |   CMakeLists.txt
+|   |   |   |   COPYRIGHT
+|   |   |   |   meson.build
+|   |   |   |   meson_options.txt
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---fuzzing
+|   |   |   |   |   coverage.py
+|   |   |   |   |   fuzz-input.options
+|   |   |   |   |   fuzz-main.c
+|   |   |   |   |   helper.c
+|   |   |   |   |   helper.h
+|   |   |   |   |   IN_tcp-d
+|   |   |   |   |   IN_tcp-h
+|   |   |   |   |   IN_tcp6-d
+|   |   |   |   |   IN_tcp6-h
+|   |   |   |   |   IN_udp-h
+|   |   |   |   |   IN_udp6-h
+|   |   |   |   |   meson.build
+|   |   |   |   |   oss-fuzz.sh
+|   |   |   |   |   README.md
+|   |   |   |   |   reproducer.c
+|   |   |   |   |   slirp_base_fuzz.h
+|   |   |   |   |   slirp_fuzz_arp.c
+|   |   |   |   |   slirp_fuzz_icmp.c
+|   |   |   |   |   slirp_fuzz_icmp6.c
+|   |   |   |   |   slirp_fuzz_ip6_header.c
+|   |   |   |   |   slirp_fuzz_ip_header.c
+|   |   |   |   |   slirp_fuzz_tcp.c
+|   |   |   |   |   slirp_fuzz_tcp6.c
+|   |   |   |   |   slirp_fuzz_tcp6_data.c
+|   |   |   |   |   slirp_fuzz_tcp6_header.c
+|   |   |   |   |   slirp_fuzz_tcp_data.c
+|   |   |   |   |   slirp_fuzz_tcp_header.c
+|   |   |   |   |   slirp_fuzz_udp.c
+|   |   |   |   |   slirp_fuzz_udp6.c
+|   |   |   |   |   slirp_fuzz_udp6_data.c
+|   |   |   |   |   slirp_fuzz_udp6_header.c
+|   |   |   |   |   slirp_fuzz_udp_data.c
+|   |   |   |   |   slirp_fuzz_udp_header.c
+|   |   |   |   |   
+|   |   |   |   +---IN_arp
+|   |   |   |   |       arp.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_dhcp
+|   |   |   |   |       dhcp.pkt
+|   |   |   |   |       dhcp_capture.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_icmp
+|   |   |   |   |       icmp_capture.pcap
+|   |   |   |   |       ping_10-0-2-2.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_icmp6
+|   |   |   |   |       icmp_capture.pcap
+|   |   |   |   |       ndp.pcap
+|   |   |   |   |       ping_10-0-2-2.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_ip-header
+|   |   |   |   |       dhcp.pkt
+|   |   |   |   |       dhcp_capture.pcap
+|   |   |   |   |       DNS_freedesktop_1-1-1-1.pcap
+|   |   |   |   |       icmp_capture.pcap
+|   |   |   |   |       nc-10.0.2.2-8080.pcap
+|   |   |   |   |       nc-ident.pcap
+|   |   |   |   |       ping_10-0-2-2.pcap
+|   |   |   |   |       tcp_qemucapt.pcap
+|   |   |   |   |       tftp-get-blah.pkt
+|   |   |   |   |       tftp_capture.pcap
+|   |   |   |   |       tftp_get_libslirp-txt.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_ip6-header
+|   |   |   |   |       DNS_freedesktop_1-1-1-1.pcap
+|   |   |   |   |       icmp_capture.pcap
+|   |   |   |   |       ping_10-0-2-2.pcap
+|   |   |   |   |       tcp_qemucapt.pcap
+|   |   |   |   |       tftp_capture.pcap
+|   |   |   |   |       tftp_get_libslirp-txt.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_ndp
+|   |   |   |   |       ndp.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_tcp
+|   |   |   |   |       nc-10.0.2.2-8080.pcap
+|   |   |   |   |       nc-ident.pcap
+|   |   |   |   |       tcp_qemucapt.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_tcp6
+|   |   |   |   |       tcp_qemucapt.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_tftp
+|   |   |   |   |       tftp-get-blah.pkt
+|   |   |   |   |       tftp_capture.pcap
+|   |   |   |   |       tftp_get_libslirp-txt.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_tftp6
+|   |   |   |   |       tftp_capture.pcap
+|   |   |   |   |       tftp_get_libslirp-txt.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_udp
+|   |   |   |   |       dhcp.pkt
+|   |   |   |   |       dhcp_capture.pcap
+|   |   |   |   |       DNS_freedesktop_1-1-1-1.pcap
+|   |   |   |   |       tftp-get-blah.pkt
+|   |   |   |   |       tftp_capture.pcap
+|   |   |   |   |       tftp_get_libslirp-txt.pcap
+|   |   |   |   |       
+|   |   |   |   +---IN_udp6
+|   |   |   |   |       DNS_freedesktop_1-1-1-1.pcap
+|   |   |   |   |       tftp_capture.pcap
+|   |   |   |   |       tftp_get_libslirp-txt.pcap
+|   |   |   |   |       
+|   |   |   |   \---tftp
+|   |   |   |           toto
+|   |   |   |           
+|   |   |   +---glib
+|   |   |   |       glib.c
+|   |   |   |       glib.h
+|   |   |   |       
+|   |   |   +---src
+|   |   |   |       arp_table.c
+|   |   |   |       bootp.c
+|   |   |   |       bootp.h
+|   |   |   |       cksum.c
+|   |   |   |       debug.h
+|   |   |   |       dhcpv6.c
+|   |   |   |       dhcpv6.h
+|   |   |   |       dnssearch.c
+|   |   |   |       if.c
+|   |   |   |       if.h
+|   |   |   |       ip.h
+|   |   |   |       ip6.h
+|   |   |   |       ip6_icmp.c
+|   |   |   |       ip6_icmp.h
+|   |   |   |       ip6_input.c
+|   |   |   |       ip6_output.c
+|   |   |   |       ip_icmp.c
+|   |   |   |       ip_icmp.h
+|   |   |   |       ip_input.c
+|   |   |   |       ip_output.c
+|   |   |   |       libslirp-version.h.in
+|   |   |   |       libslirp.h
+|   |   |   |       libslirp.map
+|   |   |   |       libslirp.test.map
+|   |   |   |       main.h
+|   |   |   |       mbuf.c
+|   |   |   |       mbuf.h
+|   |   |   |       misc.c
+|   |   |   |       misc.h
+|   |   |   |       ncsi-pkt.h
+|   |   |   |       ncsi.c
+|   |   |   |       ndp_table.c
+|   |   |   |       sbuf.c
+|   |   |   |       sbuf.h
+|   |   |   |       slirp.c
+|   |   |   |       slirp.h
+|   |   |   |       socket.c
+|   |   |   |       socket.h
+|   |   |   |       state.c
+|   |   |   |       stream.c
+|   |   |   |       stream.h
+|   |   |   |       tcp.h
+|   |   |   |       tcpip.h
+|   |   |   |       tcp_input.c
+|   |   |   |       tcp_output.c
+|   |   |   |       tcp_subr.c
+|   |   |   |       tcp_timer.c
+|   |   |   |       tcp_timer.h
+|   |   |   |       tcp_var.h
+|   |   |   |       tftp.c
+|   |   |   |       tftp.h
+|   |   |   |       udp.c
+|   |   |   |       udp.h
+|   |   |   |       udp6.c
+|   |   |   |       util.c
+|   |   |   |       util.h
+|   |   |   |       version.c
+|   |   |   |       vmstate.c
+|   |   |   |       vmstate.h
+|   |   |   |       
+|   |   |   \---test
+|   |   |           ncsitest.c
+|   |   |           pingtest.c
+|   |   |           
+|   |   \---pcap
+|   |           bluetooth.h
+|   |           bpf.h
+|   |           can_socketcan.h
+|   |           compiler-tests.h
+|   |           dlt.h
+|   |           funcattrs.h
+|   |           ipnet.h
+|   |           namedb.h
+|   |           nflog.h
+|   |           pcap-inttypes.h
+|   |           pcap.h
+|   |           sll.h
+|   |           usb.h
+|   |           vlan.h
+|   |           
+|   +---sha1
+|   |       sha1.c
+|   |       sha1.h
+|   |       sha1.hpp
+|   |       
+|   +---teakra
+|   |   |   .gitignore
+|   |   |   .travis.yml
+|   |   |   appveyor.yml
+|   |   |   CMakeLists.txt
+|   |   |   LICENSE
+|   |   |   README.md
+|   |   |   
+|   |   +---CMakeModules
+|   |   |       CreateDirectoryGroups.cmake
+|   |   |       
+|   |   +---externals
+|   |   |   |   CMakeLists.txt
+|   |   |   |   
+|   |   |   \---catch
+|   |   |           catch.hpp
+|   |   |           
+|   |   +---include
+|   |   |   \---teakra
+|   |   |           disassembler.h
+|   |   |           disassembler_c.h
+|   |   |           teakra.h
+|   |   |           teakra_c.h
+|   |   |           
+|   |   \---src
+|   |       |   ahbm.cpp
+|   |       |   ahbm.h
+|   |       |   ahbm.md
+|   |       |   apbp.cpp
+|   |       |   apbp.h
+|   |       |   apbp.md
+|   |       |   bit.h
+|   |       |   btdmp.cpp
+|   |       |   btdmp.h
+|   |       |   btdmp.md
+|   |       |   CMakeLists.txt
+|   |       |   common_types.h
+|   |       |   core_timing.h
+|   |       |   crash.h
+|   |       |   cru.md
+|   |       |   decoder.h
+|   |       |   decoder.md
+|   |       |   disassembler.cpp
+|   |       |   disassembler_c.cpp
+|   |       |   dma.cpp
+|   |       |   dma.h
+|   |       |   dma.md
+|   |       |   icu.h
+|   |       |   icu.md
+|   |       |   interpreter.h
+|   |       |   matcher.h
+|   |       |   memory_interface.cpp
+|   |       |   memory_interface.h
+|   |       |   miu.md
+|   |       |   mmio.cpp
+|   |       |   mmio.h
+|   |       |   mmio.md
+|   |       |   ocem.md
+|   |       |   operand.h
+|   |       |   parser.cpp
+|   |       |   parser.h
+|   |       |   pmu.md
+|   |       |   processor.cpp
+|   |       |   processor.h
+|   |       |   processor_general.md
+|   |       |   README.md
+|   |       |   register.h
+|   |       |   register.md
+|   |       |   shared_memory.h
+|   |       |   sio.md
+|   |       |   teakra.cpp
+|   |       |   teakra_c.cpp
+|   |       |   test.h
+|   |       |   test_generator.cpp
+|   |       |   test_generator.h
+|   |       |   timer.cpp
+|   |       |   timer.h
+|   |       |   timer.md
+|   |       |   
+|   |       +---coff_reader
+|   |       |       CMakeLists.txt
+|   |       |       coff.h
+|   |       |       main.cpp
+|   |       |       
+|   |       +---dsp1_reader
+|   |       |       CMakeLists.txt
+|   |       |       main.cpp
+|   |       |       
+|   |       +---makedsp1
+|   |       |       CMakeLists.txt
+|   |       |       main.cpp
+|   |       |       sha256.cpp
+|   |       |       sha256.h
+|   |       |       
+|   |       +---mod_test_generator
+|   |       |       CMakeLists.txt
+|   |       |       main.cpp
+|   |       |       
+|   |       +---step2_test_generator
+|   |       |       CMakeLists.txt
+|   |       |       main.cpp
+|   |       |       
+|   |       +---test_generator
+|   |       |       CMakeLists.txt
+|   |       |       main.cpp
+|   |       |       
+|   |       \---test_verifier
+|   |               CMakeLists.txt
+|   |               main.cpp
+|   |               
+|   +---tiny-AES-c
+|   |       aes.c
+|   |       aes.h
+|   |       aes.hpp
+|   |       README.md
+|   |       unlicense.txt
+|   |       
+|   \---xxhash
+|           xxh3.h
+|           xxhash.c
+|           xxhash.h
+|           
+\---tools
+        mac-libs.rb
+        mac-universal.py
+        msys-dist.sh
+        

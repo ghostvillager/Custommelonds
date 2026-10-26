@@ -1,0 +1,162 @@
+/*
+    Japanese UI strings for melonDS (source-level, not a binary patch).
+    Include this from Window.cpp / dialogs and wrap user-visible strings with T().
+*/
+#ifndef MELONDS_JA_H
+#define MELONDS_JA_H
+
+#include <QHash>
+#include <QString>
+
+inline QString T(const QString& en)
+{
+    static const QHash<QString, QString> ja = {
+        // menus
+        {"File", "ファイル"},
+        {"System", "システム"},
+        {"View", "表示"},
+        {"Config", "設定"},
+        {"Help", "ヘルプ"},
+        {"Open ROM...", "ROMを開く..."},
+        {"Open recent", "最近開いたファイル"},
+        {"Clear", "履歴を消去"},
+        {"Boot firmware", "ファームウェアを起動"},
+        {"Insert cart...", "カートリッジを挿入..."},
+        {"Eject cart", "カートリッジを取り出す"},
+        {"Insert ROM cart...", "GBA ROMを挿入..."},
+        {"Insert add-on cart", "アドオンカートリッジを挿入"},
+        {"Import savefile", "セーブファイルをインポート"},
+        {"Save state", "ステートセーブ"},
+        {"Load state", "ステートロード"},
+        {"File...", "ファイル..."},
+        {"Undo state load", "ステートロードを取り消す"},
+        {"Quit", "終了"},
+        {"Pause", "一時停止"},
+        {"Reset", "リセット"},
+        {"Stop", "停止"},
+        {"Frame step", "コマ送り"},
+        {"Power management", "電源管理"},
+        {"Date and time", "日付と時刻"},
+        {"Enable cheats", "チートを有効化"},
+        {"Setup cheat codes", "チートコード設定"},
+        {"ROM info", "ROM情報"},
+        {"RAM search", "RAM検索"},
+        {"Manage DSi titles", "DSiタイトル管理"},
+        {"Multiplayer", "マルチプレイヤー"},
+        {"Host LAN game", "LANゲームをホスト"},
+        {"Join LAN game", "LANゲームに参加"},
+        {"Screen size", "画面サイズ"},
+        {"Screen rotation", "画面の回転"},
+        {"Screen gap", "画面の間隔"},
+        {"Screen layout", "画面レイアウト"},
+        {"Swap screens", "上下画面を入れ替え"},
+        {"Screen sizing", "画面の配分"},
+        {"Aspect ratio", "アスペクト比"},
+        {"Force integer scaling", "整数倍スケーリング"},
+        {"Screen filtering", "画面フィルタ"},
+        {"Limit framerate", "フレームレート制限"},
+        {"Audio sync", "オーディオ同期"},
+        {"Show OSD", "OSDを表示"},
+        {"Open new window", "新しいウィンドウを開く"},
+        {"Launch new instance", "新しいインスタンスを起動"},
+        {"Emu settings", "エミュレータ設定"},
+        {"Input and hotkeys", "入力とホットキー"},
+        {"Video settings", "映像設定"},
+        {"Audio settings", "音声設定"},
+        {"Firmware settings", "ファームウェア設定"},
+        {"Wifi settings", "Wi-Fi設定"},
+        {"Interface settings", "インターフェース設定"},
+        {"Path settings", "パス設定"},
+        {"Camera settings", "カメラ設定"},
+        {"Multiplayer settings", "マルチプレイヤー設定"},
+        {"Open melonDS directory", "melonDSフォルダを開く"},
+        {"About...", "melonDSについて..."},
+
+        // interface dialog
+        {"Interface settings - melonDS", "インターフェース設定 - melonDS"},
+        {"User interface", "ユーザーインターフェース"},
+        {"Theme", "テーマ"},
+        {"Hide mouse after inactivity", "無操作時にマウスカーソルを隠す"},
+        {"After", "時間"},
+        {"seconds", "秒"},
+        {"Pause emulation when window is not in focus", "ウィンドウが非アクティブのとき一時停止"},
+        {"Mute audio while fast forwarding", "早送り中は音声をミュート"},
+        {"Start in fullscreen", "起動時にフルスクリーンにする"},
+        {"Framerate ", "フレームレート"},
+        {"Target FPS", "目標FPS"},
+        {"Clean", "標準"},
+        {"Accurate", "実機相当"},
+        {"Fast-Forward", "早送り"},
+        {"2x", "2倍"},
+        {"3x", "3倍"},
+
+        // layout names (Window.cpp arrays)
+        {"Natural", "標準"},
+        {"Vertical", "縦並び"},
+        {"Horizontal", "横並び"},
+        {"Hybrid", "ハイブリッド"},
+        {"Even", "均等"},
+        {"Emphasize top", "上画面を大きく"},
+        {"Emphasize bottom", "下画面を大きく"},
+        {"Auto", "自動"},
+        {"Top only", "上画面のみ"},
+        {"Bottom only", "下画面のみ"},
+
+        // hotkeys
+        {"Pause/resume", "一時停止/再開"},
+        {"Fast forward", "早送り"},
+        {"Toggle fast forward", "早送り切替"},
+        {"Slow mo", "スローモーション"},
+        {"Toggle slow mo", "スロー切替"},
+        {"Toggle FPS limit", "FPS制限切替"},
+        {"Toggle fullscreen", "フルスクリーン切替"},
+        {"Close/open lid", "フタを閉じる/開く"},
+        {"Microphone", "マイク"},
+        {"Swap screen emphasis", "強調画面の入替"},
+        {"DSi Power button", "DSi電源ボタン"},
+        {"DSi Volume up", "DSi音量アップ"},
+        {"DSi Volume down", "DSi音量ダウン"},
+        {"Toggle audio mute", "ミュート切替"},
+
+        // common dialogs
+        {"Emu settings - melonDS", "エミュレータ設定 - melonDS"},
+        {"General", "一般"},
+        {"Console type:", "本体タイプ:"},
+        {"Boot game directly", "ゲームを直接起動"},
+        {"DS-mode", "DSモード"},
+        {"DSi-mode", "DSiモード"},
+        {"Video settings - melonDS", "映像設定 - melonDS"},
+        {"Audio settings - melonDS", "音声設定 - melonDS"},
+        {"Firmware settings - melonDS", "ファームウェア設定 - melonDS"},
+        {"Input and hotkeys - melonDS", "入力とホットキー - melonDS"},
+        {"Path settings - melonDS", "パス設定 - melonDS"},
+        {"Wifi settings - melonDS", "Wi-Fi設定 - melonDS"},
+        {"Camera settings - melonDS", "カメラ設定 - melonDS"},
+        {"About melonDS", "melonDSについて"},
+        {"Browse...", "参照..."},
+        {"Language:", "言語:"},
+        {"Username:", "ユーザー名:"},
+        {"Color:", "色:"},
+        {"Birthday:", "誕生日:"},
+        {"Message:", "メッセージ:"},
+        {"Cancel", "キャンセル"},
+        {"OK", "OK"},
+        {"Apply", "適用"},
+        {"Close", "閉じる"},
+        {"Open", "開く"},
+        {"Save", "保存"},
+        {"Delete", "削除"},
+        {"Edit", "編集"},
+        {"Import...", "インポート..."},
+        {"Export...", "エクスポート..."},
+        {"Nintendo DS ROMs (*.nds *.srl *.dsi *.ids *.nds.gba);;Any file (*.*)",
+         "ニンテンドーDS ROM (*.nds *.srl *.dsi *.ids *.nds.gba);;すべてのファイル (*.*)"},
+    };
+
+    auto it = ja.constFind(en);
+    return it == ja.cend() ? en : it.value();
+}
+
+inline QString T(const char* en) { return T(QString::fromUtf8(en)); }
+
+#endif
